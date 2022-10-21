@@ -1,0 +1,304 @@
+:root
+{
+	--primary: #05284B;
+    --Secondary: #4B4453;
+    --dark-green: #36888B;
+    --dark-green35: #36888B5A;
+    --light-green: #00C6BC;
+    --doc-color: #CCCCCC;
+    --footer-blue: #39416C;
+    --footer-icon: #85B6FFCC;
+    --white: #FFFFFF;
+    --dark: #000000;
+    --dark45: #00000073;
+    --primary75:#05284BAB;
+}
+
+body
+{
+    background: lavender;
+}
+
+/********************************/ 
+/********** LOGIN PAGE **********/ 
+/********************************/
+
+#login-main
+{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: steelblue;
+}
+
+#login-main form
+{
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 3rem;
+    box-shadow: 0.0625rem 0.0625rem 1rem var(--dark);
+    background-color: var(--white);
+    border-radius: 1rem;
+}
+
+#login-main form > *
+{
+    box-shadow: none;
+}
+
+#login-main h1,
+#login-main label
+{
+    color: var(--primary);
+    font-weight: 700;
+}
+
+#login-main input[type="button"]
+{
+    background-color: var(--primary);
+    color: var(--white);
+    font-weight: bold;
+    padding: 0.5rem 2.5rem;
+}
+
+#login-main input[type="button"]:hover
+{
+    background-color: #073461;
+    color: var(--white);
+}
+
+/********************************/ 
+/******* SIDEBAR SECTION ********/ 
+/********************************/
+aside
+{
+    z-index: 1;
+}
+
+aside .sidebar-fix
+{
+    background-color: var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16%;
+    min-height: 100vh;
+}
+
+nav
+{
+    z-index: -1;
+}
+
+aside .sidebar-fix a
+{
+    position: relative;
+}
+
+aside .sidebar-fix a .img-container
+{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+aside .sidebar-fix a img
+{
+    height: 100%;
+    width: 100%;  
+}
+
+aside .sidebar-fix a h1
+{
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--doc-color);
+}
+
+@media (max-width: 1100px)
+{
+    aside .sidebar-fix a h1
+    {
+        font-size: 1.05rem;
+    }
+}
+
+aside .sidebar-fix .nav-pills
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+aside .sidebar-fix .nav-pills a:not(.collapse a)
+{
+    color: var(--doc-color);
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+aside .sidebar-fix .nav-pills .collapse a
+{
+    color: var(--doc-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+aside .sidebar-fix .nav-pills .collapse a:hover
+{
+    background: var(--white);
+    color: var(--primary);
+}
+
+/********************************/ 
+/***** MAIN CONTENT SECTION *****/ 
+/********************************/
+
+.right-pane
+{
+    margin-left: 16%;
+    width: 84%;
+    position: relative;
+}
+
+.right-pane .navbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.15rem 0;
+}
+
+.right-pane .navbar .section-name h2
+{
+    font-weight: 900;
+    color: var(--primary);
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.right-pane .navbar .user-details
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    border: 0.125rem solid var(--primary);
+    border-radius: 0.325rem;
+    padding: 0 0.5rem;
+}
+
+.right-pane .navbar .user-details .username
+{
+    color: var(--primary);
+    font-weight: 800;
+    border-right: 0.125rem solid var(--primary);
+    padding-right: 0.45rem;
+}
+
+.right-pane .navbar .user-details .user-settings
+{
+    cursor: pointer;
+}
+
+.right-pane .main-content
+{
+    padding: 1rem;
+
+}
+
+/********************************/ 
+/*********  ABOUT PAGE **********/ 
+/********************************/
+
+.detail-wrapper
+{
+    width: 100%;
+    position: relative;
+    display: flex;
+    border: 0.0625rem solid var(--dark);
+}
+
+.detail-wrapper > *
+{
+    width: calc(100% / 4);
+    text-align: center;
+}
+
+.detail-wrapper > *:not(:last-child)
+{
+    border-right: 0.0625rem solid var(--dark);
+}
+
+.detail-wrapper > div .header
+{
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding-top: 0.8rem;
+    border-bottom: 0.0625rem solid var(--dark);
+}
+
+.detail-wrapper > div .main-content
+{
+    width: auto;
+    height: 10rem;
+    overflow: scroll;
+    position: relative;
+    font-weight: 600;
+    border-bottom: 0.0625rem solid var(--dark);
+}
+
+.detail-wrapper > div .main-content img, 
+.detail-wrapper > div .main-content p
+{
+    height: 100%;
+    width: 100%;
+}
+
+.detail-wrapper .action-btns .btn
+{
+    padding: 0.35rem 1.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: none;
+}
+
+@media (max-width:1100px)
+{
+    .detail-wrapper .action-btns .btn
+    {
+        font-size: 0.95rem;
+        padding: 0.25rem 1.25rem;
+    }
+}
+
+.flex-fix > *
+{
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+.main-content .update-btn
+{
+    width: 100%;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+/********************************/ 
+/*******  INTRODUCTION PAGE ********/ 
+/********************************/
