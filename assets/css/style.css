@@ -222,7 +222,7 @@ aside .sidebar-fix .nav-pills .collapse a:hover
 }
 
 /********************************/ 
-/*********  ABOUT PAGE **********/ 
+/********** CONTENTS ************/ 
 /********************************/
 
 .detail-wrapper
@@ -299,6 +299,13 @@ aside .sidebar-fix .nav-pills .collapse a:hover
     padding-right: 2rem;
 }
 
-/********************************/ 
-/*******  INTRODUCTION PAGE ********/ 
-/********************************/
+.height-fix
+{
+    height: auto;
+}
+
+.height-fix > div .main-content
+{
+    max-height: 5rem;
+    overflow: scroll;
+}
