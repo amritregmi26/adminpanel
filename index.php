@@ -15,13 +15,13 @@
 
 <body>
     <main id="login-main">
-        <form action="" method="post">
+        <form action="implementation/loginlogic.php" method="post">
             <h1 class="text-capitalize">admin login</h1>
             <label for="username">Username: </label>
             <input class="form-control" type="text" name="username" id="username">
             <label for="password">Password: </label>
             <input class="form-control" type="password" name="password" id="password">
-            <input class="btn rounded-pill" type="button" value="Login">
+            <input class="btn rounded-pill" type="submit" value="Login">
         </form>
     </main>
 </body>

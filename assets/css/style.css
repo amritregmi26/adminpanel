@@ -61,7 +61,7 @@ body
     font-weight: 700;
 }
 
-#login-main input[type="button"]
+#login-main input[type="submit"]
 {
     background-color: var(--primary);
     color: var(--white);
